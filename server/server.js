@@ -55,6 +55,8 @@ app.get('/homepage/:sessionUser', async (req, res) => {
             const data = await db.any(query, [ id ]);
             console.log(data);
             posts = data;
+        } else {
+            posts = [{body: 'Add your first post!'}];
         }
     } catch (err) {
         console.log(err);
