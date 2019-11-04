@@ -47,7 +47,10 @@ Router.get('/:user_id', async (req, res) => {
 
 Router.post('/register', async (req, res) => {
     const { user_id, body } = req.body;
-    const query = "INSERT INTO posts (user_id, body) VALUES ($1, $2)";
+    const query = `
+    INSERT INTO posts (user_id, body) VALUES ($1, $2); 
+    UPDATE users SET all_posts = array_append(all_posts, 1) WHERE id = $1
+    `;
     
     try {
         const data = await db.none(query, [user_id, body]);

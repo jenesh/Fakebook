@@ -8,13 +8,13 @@ Router.post('/add', async (req, res) => {
 
     try {
         const data = await db.none(query, [user_id, post_id]);
-        console.log(data)
+        console.log(data);
         res.send({
             message: `Added a like from ${user_id} to ${post_id}`,
             success: true
         })
     } catch (err) {
-        console.log(err)
+        console.log(err);
         res.send({
             message: `There seemes to be an error try again`,
             success: false,
@@ -42,5 +42,7 @@ Router.get('/all', async (req, res) => {
         })
     }
 });
+
+// Filter by number of likes
 
 module.exports = Router;
