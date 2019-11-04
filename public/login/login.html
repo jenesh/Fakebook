@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fakebook Login</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div id="root">
@@ -16,8 +17,10 @@
             <div id="login-container">
                 <input type="text" name="username" id="username">
                 <input type="password" name="password" id="password">
-                <input type="button" value="Login">
+                <input type="button" value="Login" id="login">
+                <input type="button" value="Sign Up" id="signup">
             </div>
+            <div id="login-error"></div>
         </main>
     </div>
     <script src="/login/login.js"></script>

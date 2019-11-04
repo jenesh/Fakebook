@@ -19,7 +19,9 @@
   "homepage": "https://github.com/jenesh/Pursuit-Core-Web-pg-promise-Lab#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "pg-promise": "^9.3.3"
   }
 }
