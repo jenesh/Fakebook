@@ -8,9 +8,11 @@
     <style>
         p {border: 1px solid black; box-shadow: 1px 1px 2px 2px gray; padding: 2px; text-align: center;};
     </style>
+    <link rel="stylesheet" href="../stylesheets/profile.css">
 </head>
 <body>
     <div id="root">
+        <% include partials/nav.ejs %>
         <h1>Welcome to your homepage <%= sessionUser %></h1>
         <div id="posts">
             <% posts.forEach(ele => { %>
